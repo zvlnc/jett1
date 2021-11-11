@@ -1,0 +1,4 @@
+$dns =  ipconfig /displaydns 
+$Path = "C:\Users\SUS\Desktop\piola\UmVzdWx0YWRvcw==.txt"
+$codificado = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($dns))
+Set-Content -Value "$codificado" -Path $Path
